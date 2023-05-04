@@ -2,8 +2,9 @@ import Link from "next/link";
 import React from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
-import { TwitterIcon, GithubIcon, LinkedInIcon, PinterestIcon } from "./Icons";
+import { TwitterIcon, GithubIcon, LinkedInIcon, PinterestIcon, SunIcon, MoonIcon } from "./Icons";
 import { motion } from "framer-motion";
+import useThemeSwitch from "@/hooks/useThemeSwitch";
 
 const CustomerLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -12,7 +13,7 @@ const CustomerLink = ({ href, title, className = "" }) => {
     <Link href={href} className={`${className} relative group`}>
       {title}
       <span
-        className={`h-[1px] inline-block w-0 bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300
+        className={`h-[1px] inline-block w-0 bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 dark:bg-light
         ${router.asPath === href ? "w-full" : "w-0"}
         `}
       >
@@ -23,8 +24,10 @@ const CustomerLink = ({ href, title, className = "" }) => {
 };
 
 const NavBar = () => {
+
+  const [mode, setMode] = useThemeSwitch()
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
+    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light">
       <nav>
         <CustomerLink href="/" title="Home" className="mr-4" />
         <CustomerLink href="/about" title="About" className="mx-4" />
@@ -86,6 +89,15 @@ const NavBar = () => {
           <DribbbleIcon />
         </motion.a>
          */}
+
+         <button 
+         className={`ml-3 flex items-center justify-center rounded-full p-1 ${ mode === 'light' ? 'bg-dark text-light': 'bg-light text-dark' }`}
+         onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
+         >
+         {
+          mode === 'dark' ? <SunIcon className={"fill-dark"} /> : <MoonIcon className={"fill-dark"} />
+         }
+         </button>
       </nav>
 
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">

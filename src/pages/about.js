@@ -39,7 +39,7 @@ const about = () => {
         <meta name="description" content="about page" />
       </Head>
 
-      <main className="flex w-full items-center flex-col justify-center">
+      <main className="flex w-full items-center flex-col justify-center dark:text-light">
         <Layout className='pt-16'>
         <AnimatedTexts text="Passion Fuels Purpose!" className='mb-16' />
         <div className="grid w-full grid-cols-8 gap-16">
@@ -68,21 +68,21 @@ every project I work on. I look forward to the opportunity to bring my skills an
                 <span className='inline-block text-7xl font-bold'>
                     <AnimatedNum val={30} />+
                     </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75'>satisfied clients</h2>
+                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>satisfied clients</h2>
             </div>
 
             <div className='flex flex-col items-end justify-center'>
                 <span className='inline-block text-7xl font-bold'>
                 <AnimatedNum val={40} />+
                 </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75'>Projects Completed</h2>
+                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>Projects Completed</h2>
             </div>
 
             <div className='flex flex-col items-end justify-center'>
                 <span className='inline-block text-7xl font-bold'>
                 <AnimatedNum val={4} />+
                     </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75'>Years of experience</h2>
+                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>Years of experience</h2>
             </div>
         </div>
 

@@ -82,7 +82,7 @@ every project I work on. I look forward to the opportunity to bring my skills an
                 <span className='inline-block text-7xl font-bold'>
                 <AnimatedNum val={4} />+
                     </span>
-                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75'>Years of experience</h2>
+                <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 '>Years of experience</h2>
             </div>
         </div>
 

@@ -44,7 +44,7 @@ const about = () => {
         <AnimatedTexts text="Passion Fuels Purpose!" className='mb-16' />
         <div className="grid w-full grid-cols-8 gap-16">
             <div className='col-span-3 flex flex-col items-start justify-start'>
-                <h2 className='mb-4 text-lg font-bold uppercase text-dark/75'>Biography </h2>
+                <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>Biography </h2>
                 <p className='font-medium'>Hi, I'm CodeBucks, a web developer and UI/UX designer with a passion for creating beautiful, functional, 
 and user-centered digital experiences. With 4 years of experience in the field. I am always looking for 
 new and innovative ways to bring my clients' visions to life.</p>
@@ -58,9 +58,21 @@ other digital product, I bring my commitment to design excellence and user-cente
 every project I work on. I look forward to the opportunity to bring my skills and passion to your next project.
 </p>
             </div>
-            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8'>
-                <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark' />
-                <Image src={profilePic} alt="ProfileName" className="w-full h-auto rounded-2xl" />
+
+            <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light'>
+                <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light' />
+                <Image 
+                src={profilePic} 
+                alt="ProfileName" 
+                className="w-full h-auto rounded-2xl"
+                priority
+                sizes='
+                 (max-width: 768px) 100vw,
+                 (max-width: 1200px) 50vw,
+                 33vw
+                 '
+                />
+                
             </div>
 
          <div className='col-span-2 flex flex-col items-end justify-between'>

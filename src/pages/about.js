@@ -4,7 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import AnimatedTexts from "@/components/AnimatedTexts";
 import Layout from "@/components/Layout";
-import profilePic from "../../public/images/profile/developer-pic-2.jpg";
+import profilePic from "../../public/images/profile/IMG-20230922-WA0010.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/MySkills";
 import Experience from "@/components/Experience";
@@ -54,7 +54,7 @@ const about = () => {
                 Biography{" "}
               </h2>
               <p className="font-medium">
-                Hi, I'm CodeBucks, a web developer and UI/UX designer with a
+                Hi, I'm Ore, a web developer  with a
                 passion for creating beautiful, functional, and user-centered
                 digital experiences. With 4 years of experience in the field. I
                 am always looking for new and innovative ways to bring my
